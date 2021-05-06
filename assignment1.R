@@ -1,0 +1,1 @@
+assign1.csv<-read.csv("~/Downloads/assign1.csv")
