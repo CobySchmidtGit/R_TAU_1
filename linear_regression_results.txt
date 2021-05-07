@@ -1,0 +1,93 @@
+
+Call:
+lm(formula = y ~ X1 + X2 + X3 + X4 + X5, data = assign1.csv)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-737.06 -194.65  -15.81  201.06  938.88 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 1939.33304   64.33075  30.146  < 2e-16 ***
+X1            -0.00360    0.01832  -0.196  0.84433    
+X2             0.15985    0.09056   1.765  0.07838 .  
+X3             5.47661    1.72822   3.169  0.00166 ** 
+X4            10.50604    7.28776   1.442  0.15026    
+X5           -74.11823   46.01181  -1.611  0.10806    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 290.3 on 372 degrees of freedom
+Multiple R-squared:  0.04315,	Adjusted R-squared:  0.03029 
+F-statistic: 3.355 on 5 and 372 DF,  p-value: 0.005615
+
+> mdl2 <- lm(y ~ X1+X2+X3 , data = assign1.csv)
+> summary(mdl2)
+
+Call:
+lm(formula = y ~ X1 + X2 + X3, data = assign1.csv)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-774.72 -200.40  -22.06  212.98  944.07 
+
+Coefficients:
+               Estimate  Std. Error t value Pr(>|t|)    
+(Intercept) 1959.677125   57.934772  33.826  < 2e-16 ***
+X1            -0.005289    0.018236  -0.290  0.77195    
+X2             0.158410    0.090644   1.748  0.08135 .  
+X3             5.484905    1.729447   3.171  0.00164 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 290.6 on 374 degrees of freedom
+Multiple R-squared:  0.03618,	Adjusted R-squared:  0.02845 
+F-statistic:  4.68 on 3 and 374 DF,  p-value: 0.003187
+
+> mdl3 <- lm(y ~ X1+X2+X3+X5 , data = assign1.csv)
+> summary(mdl3)
+
+Call:
+lm(formula = y ~ X1 + X2 + X3 + X5, data = assign1.csv)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-762.16 -199.23  -24.68  209.02  932.80 
+
+Coefficients:
+               Estimate  Std. Error t value Pr(>|t|)    
+(Intercept) 1972.467795   60.171289  32.781  < 2e-16 ***
+X1            -0.006033    0.018269  -0.330  0.74140    
+X2             0.158715    0.090690   1.750  0.08093 .  
+X3             5.508711    1.730571   3.183  0.00158 ** 
+X5           -23.741121   29.975070  -0.792  0.42885    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 290.7 on 373 degrees of freedom
+Multiple R-squared:  0.0378,	Adjusted R-squared:  0.02748 
+F-statistic: 3.664 on 4 and 373 DF,  p-value: 0.00609
+
+> mdl4 <- lm(y ~ X1+X2+X3+X4 , data = assign1.csv)
+> summary(mdl4)
+
+Call:
+lm(formula = y ~ X1 + X2 + X3 + X4, data = assign1.csv)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-774.95 -196.94  -22.15  209.42  948.61 
+
+Coefficients:
+               Estimate  Std. Error t value Pr(>|t|)    
+(Intercept) 1950.554549   64.089037  30.435  < 2e-16 ***
+X1            -0.004682    0.018348  -0.255  0.79874    
+X2             0.158484    0.090752   1.746  0.08158 .  
+X3             5.472402    1.731907   3.160  0.00171 ** 
+X4             1.590062    4.750998   0.335  0.73805    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 290.9 on 373 degrees of freedom
+Multiple R-squared:  0.03647,	Adjusted R-squared:  0.02614 
+F-statistic:  3.53 on 4 and 373 DF,  p-value: 0.007635
