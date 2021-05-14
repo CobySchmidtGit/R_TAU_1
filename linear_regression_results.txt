@@ -91,3 +91,64 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 290.9 on 373 degrees of freedom
 Multiple R-squared:  0.03647,	Adjusted R-squared:  0.02614 
 F-statistic:  3.53 on 4 and 373 DF,  p-value: 0.007635
+
+Call:
+lm(formula = y ~ X4, data = has_dog_garden)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-791.25 -188.94   16.99  208.26  867.58 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 1979.291     64.932  30.483   <2e-16 ***
+X4            10.392      8.229   1.263    0.208    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 297.2 on 180 degrees of freedom
+Multiple R-squared:  0.008782,	Adjusted R-squared:  0.003276 
+F-statistic: 1.595 on 1 and 180 DF,  p-value: 0.2083
+
+> summary(md4_dont)
+
+Call:
+lm(formula = y ~ X4, data = dont_have_dog_garden)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-659.3 -216.0  -40.9  203.2  910.7 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  2042.52      49.01  41.679   <2e-16 ***
+X4             13.38      17.00   0.787    0.432    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 292.8 on 194 degrees of freedom
+Multiple R-squared:  0.003182,	Adjusted R-squared:  -0.001956 
+F-statistic: 0.6193 on 1 and 194 DF,  p-value: 0.4323
+
+> 
+> multcol = lm(X4~X5, data = assign1.csv)
+> 
+> summary(multcol)
+
+Call:
+lm(formula = X4 ~ X5, data = assign1.csv)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.6071 -1.4231 -0.4231  1.3929 12.5769 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   2.6071     0.1474   17.69   <2e-16 ***
+X5            4.8159     0.2124   22.67   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.064 on 376 degrees of freedom
+Multiple R-squared:  0.5775,	Adjusted R-squared:  0.5764 
+F-statistic:   514 on 1 and 376 DF,  p-value: < 2.2e-16

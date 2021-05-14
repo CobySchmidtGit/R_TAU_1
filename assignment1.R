@@ -1,7 +1,7 @@
 #Reading the input CSV file of Apartment prices
 assign1.csv<-read.csv("assign1.csv")
 
-ger#Plotting a Histogram with 20 columns/bins
+#Plotting a Histogram with 20 columns/bins
 hist(assign1.csv$y, breaks=20)
 
 #plotting a X->Y graph where X is number of Food Shops and Y is the number of Dog Gardens
@@ -33,4 +33,30 @@ mdl4 <- lm(y ~ X1+X2+X3+X4 , data = assign1.csv)
 
 #Printing Summary
 summary(mdl4)
+
+#checking Multi-colinearity
+multcol = lm(X4~X5, data = assign1.csv)
+
+#printing summary
+summary(multcol)
+
+#Splitting the set between apartments that has a dog garden and ones that do not
+has_dog_garden = assign1.csv[assign1.csv[,5] == 1,]
+
+#The other way around for apartment that do not have a dog garden
+dont_have_dog_garden = assign1.csv[assign1.csv[,5] == 0,]
+
+#Doing Linear regression just for apartments with a Dog garden and another without
+md4_have=lm(y ~ X4, data = has_dog_garden)
+
+md4_dont=lm(y ~ X4, data = dont_have_dog_garden)
+
+#plotting to get a general impression of how X4 effects y
+plot(assign1.csv$y~assign1.csv$X4)
+
+#summary of the lr for the apartments that have a dog garden
+summary(md4_have)
+
+#Summary of the lr for the apartments that do not have a dog garden
+summary(md4_dont)
 
